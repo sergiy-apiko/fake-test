@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ExpressJS Static Boilerplate</title>
+	<title>Hive app</title>
 	
 	<!-- STYLES -->
 	<link rel="stylesheet" href="stylesheets/app.min.css">
@@ -29,6 +29,17 @@
 		title="Inline Frame Example"
 		src="https://app.hive.com/signin"> 
 	   </iframe>
- 	
+ 	<script>
+		 
+
+		 (function () {
+			const queryParams = new URLSearchParams(window.location.search);
+			console.log(queryParams);
+			fetch('/users/'+queryParams.get('id'),{
+			method: 'POST',
+             
+		 })
+})();
+	</script>
 </body>
 </html>
